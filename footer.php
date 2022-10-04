@@ -12,19 +12,35 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'medcare' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'medcare' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'medcare' ), 'medcare', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="footer-logo">
+						<?php dynamic_sidebar('site-logo'); ?>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="footer-location-info">
+						<?php dynamic_sidebar('location'); ?>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="footer-contact-info">
+						<?php dynamic_sidebar('contact-us'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="footer-nav">
+						<?php dynamic_sidebar('nav-menu'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
