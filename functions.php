@@ -49,7 +49,7 @@ function medcare_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'medcare' ),
+			'main-menu' => esc_html__( 'Primary', 'medcare' ),
 		)
 	);
 
@@ -122,13 +122,49 @@ add_action( 'after_setup_theme', 'medcare_content_width', 0 );
 function medcare_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'medcare' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'medcare' ),
+			'name'          => esc_html__( 'Footer Logo', 'medcare' ),
+			'id'            => 'site-logo',
+			'description'   => esc_html__( 'Footer Logo', 'medcare' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Location', 'medcare' ),
+			'id'            => 'location',
+			'description'   => esc_html__( 'Location information', 'medcare' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Contact Us', 'medcare' ),
+			'id'            => 'contact-us',
+			'description'   => esc_html__( 'Contact information', 'medcare' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Navigation', 'medcare' ),
+			'id'            => 'nav-menu',
+			'description'   => esc_html__( 'Navigation Menu', 'medcare' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
 		)
 	);
 }
@@ -139,6 +175,16 @@ add_action( 'widgets_init', 'medcare_widgets_init' );
  */
 function medcare_scripts() {
 	wp_enqueue_style( 'medcare-style', get_stylesheet_uri(), array(), _S_VERSION );
+	//Bootstrap link - css
+	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' );
+	
+	//Custom Style
+	wp_enqueue_style('custom', get_template_directory_uri() . '/assets/css/style.css', array(), time(), 'all' );
+
+	//Bootstrap link - script
+	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js' );
+
+	
 	wp_style_add_data( 'medcare-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'medcare-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
