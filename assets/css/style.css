@@ -115,10 +115,6 @@ a {
     transition: all 0.3s ease;
 }
 
-a:visited {
-    color: #000;
-}
-
 a:hover {
     color: #5853F6;   
 }
@@ -145,6 +141,9 @@ a:hover {
 /* Navigation */
 .site-header {
     padding: 35px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .site-header .row {
@@ -210,3 +209,61 @@ a:hover {
     padding-left: 20px;
 }
 
+/* Section: Banner */
+.banner {
+    padding: 150px 0 70px 0;
+    background-color: #F5F6FF;
+}
+
+.banner__heading  {
+    padding-right: 100px;
+    color: #32375F;
+    font-weight: bold;
+}
+
+.banner__heading > span {
+    color: #5853F6;
+}
+
+.banner__desc {
+    margin-bottom: 50px;
+    padding-right: 280px;
+}
+
+.banner__cta a {
+    text-decoration: none;
+}
+
+
+
+/* Section: Healthcare */
+
+.healthcare {
+    padding: 150px 0 245px 0;
+}
+
+.healthcare__col-2--padding {
+    padding-left: 135px;
+}
+
+.healthcare__heading {
+    color: #32375F;
+    font-weight: bold;
+}
+
+.healthcare__heading span {
+    color: #5853F6;
+}
+
+.healthcare__cta a {
+    text-decoration: none;
+}
+
+.healthcare__heading {
+    margin-bottom: 50px;
+}
+
+.healthcare__desc {
+    margin-bottom: 80px;
+    padding-right: 150px;
+}
