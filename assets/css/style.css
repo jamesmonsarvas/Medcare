@@ -92,8 +92,7 @@ body {
     max-width: 1600px;
 }
 
-h1,
-h2 {
+h1, h2 {
     font-size: 2.5rem;
 }
 
@@ -101,12 +100,7 @@ h3 {
     font-size: 1.25rem;
 }
 
-h4, h5, h6 {
-    font-size: 1rem;
-}
-
-
-p {
+h4, h5, h6, p {
     font-size: 1rem;
 }
 
@@ -136,6 +130,24 @@ a:hover {
     border-radius: 10px;
     font-size: 1rem;
     color:#5854F7;
+}
+
+.btn-outline {
+    background-color: #5854F700;
+    padding: 20px 38px;
+    border: 2px solid #5854F7;
+    border-radius: 10px;
+    font-size: 1rem;
+    color:#5854F7;
+}
+
+.btn-outline:hover {
+    background-color: #5854F7;
+    padding: 20px 38px;
+    border: 2px solid #5854F7;
+    border-radius: 10px;
+    font-size: 1rem;
+    color:#fff;
 }
 
 /* Navigation */
@@ -173,6 +185,11 @@ a:hover {
 
 .main-navigation li a, .secondary-nav li a {
     text-decoration: none;
+}
+
+/* Circle Check */
+.fa-circle-check {
+    color: #E0DFF3;
 }
 
 
@@ -234,7 +251,21 @@ a:hover {
     text-decoration: none;
 }
 
+.banner__icon {
+    margin-top: 150px;
+}
 
+.banner__icon .col-padding {
+    padding-right: 100px;
+}
+
+.banner__icon .repeater__title {
+    padding-left: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 21;
+    font-weight: bold;
+    color: #BACEEC;
+}
 
 /* Section: Healthcare */
 
@@ -242,28 +273,138 @@ a:hover {
     padding: 150px 0 245px 0;
 }
 
-.healthcare__col-2--padding {
-    padding-left: 135px;
-}
-
 .healthcare__heading {
     color: #32375F;
     font-weight: bold;
+    padding-right: 100px;
+}
+
+.healthcare__col-2--padding {
+    padding-left: 50px;
 }
 
 .healthcare__heading span {
     color: #5853F6;
 }
 
+
 .healthcare__cta a {
     text-decoration: none;
 }
 
-.healthcare__heading {
-    margin-bottom: 50px;
+.healthcare__list ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
-.healthcare__desc {
-    margin-bottom: 80px;
-    padding-right: 150px;
+.healthcare__list ul > li {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #32375F;
+}
+
+/* Section: Plan */
+
+.plan {
+    background-color: #F6F6FF;
+    padding: 150px 0 150px 0;
+}
+
+.plan__heading {
+    font-weight: 700;
+    text-align: center;
+    color: #33375E;
+}
+
+.plan__price {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #33375E;
+    font-weight: 700;
+    text-align: center;
+    color: #33375E;   
+}
+
+.plan ul {
+    margin: 0;
+    padding: 30px;
+}
+
+.plan ul li {
+    color: #32375F;
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.plan__col:nth-child(1) {
+    height: 600px;
+    padding: 50px 20px 50px 20px;
+    margin-right: 100px;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+.plan__col:nth-child(1) li:nth-child(3), 
+.plan__col:nth-child(1) li:nth-child(4),
+.plan__col:nth-child(1) li:nth-child(5) {
+    opacity: 50%;
+}
+
+.plan__col:nth-child(2) li:nth-child(4), 
+.plan__col:nth-child(2) li:nth-child(5){
+    opacity: 50%;
+}
+
+.plan__col:nth-child(3) {
+    height: 600px;
+    padding: 50px 20px 50px 20px;
+    margin-left: 100px;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+.plan__col:nth-child(2) {
+    position: relative;
+    padding: 50px 20px 50px 20px;
+    border-radius: 30px;
+    background-color: #33375E;
+    height: 650px;
+}
+
+.plan__col:nth-child(2) h2 {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.plan__col:nth-child(2) h3,
+.plan__col:nth-child(2) li {
+    color: #fff;
+}
+
+.plan__col:nth-child(2)::before {
+    content: "Recommended";
+    position: absolute;
+    margin:0 auto;
+    top: -20px;
+    left: 0;
+    right: 0;
+    display: block;
+    padding: 5px;
+    width: 60%;
+    border: 2px solid #FFA0C2;
+    border-radius: 100px;
+    background-color: #FFA0C2;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.plan__cta {
+    text-align: center;
+}
+
+.plan__cta a {
+    text-decoration: none;
 }
