@@ -139,11 +139,18 @@ a:hover {
 }
 
 /* Navigation */
-.site-header {
-    padding: 35px 0;
+.home .site-header,
+.page-template-about .site-header {
     position: absolute;
     top: 0;
     width: 100%;
+    margin-bottom: 0;
+}
+
+.site-header {
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 35px 0;
 }
 
 .site-header .row {
@@ -175,11 +182,67 @@ a:hover {
     text-decoration: none;
 }
 
+<<<<<<< Updated upstream
+=======
+.secondary-nav ul li {
+    position: relative;
+}
+
+.secondary-nav ul li button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.secondary-nav ul li button i {
+    margin-left: 5px;
+}
+
+.secondary-nav ul li ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    width: 245px;
+    padding: 25px;
+    background-color: #D9D7FB;
+    border-radius: 10px;
+}
+
+.secondary-nav ul li ul.show {
+    display: block;
+}
+
+.secondary-nav ul li ul li {
+    margin-right: 0 !important;
+}
+
+.secondary-nav ul li ul li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.secondary-nav ul li ul li a {
+    display: block;
+    color: #8A8A8A;
+    font-size: 18px;
+}
+
+.secondary-nav ul li ul li a:hover {
+    color: #342EFF;
+}
+
+/* Circle Check */
+.fa-circle-check {
+    color: #E0DFF3;
+}
+
+>>>>>>> Stashed changes
 
 /* Footer */
 .site-footer {
-    background-color: #E7EBFB;
+    margin-top: 100px;
     padding: 40px;
+    background-color: #E7EBFB;
 }
 
 .site-footer .container {
@@ -239,9 +302,10 @@ a:hover {
 /* Section: Healthcare */
 
 .healthcare {
-    padding: 150px 0 245px 0;
+    padding: 150px 0;
 }
 
+<<<<<<< Updated upstream
 .healthcare__col-2--padding {
     padding-left: 135px;
 }
@@ -249,6 +313,107 @@ a:hover {
 .healthcare__heading {
     color: #32375F;
     font-weight: bold;
+=======
+.healthcare .container .healthcare__image {
+    position: relative;
+}
+
+.healthcare .container .healthcare__image img {
+    position: inherit;
+    z-index: 1;
+}
+
+.healthcare .container .under-image {
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
+    margin-left: 80px;
+    padding: 20px;
+    padding-right: 100px;
+    width: 400px;
+    background-color: #fff;
+    border-left: 5px solid #615FE3;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.healthcare .container .under-image .container-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #605EE1;
+}
+
+.healthcare .container .heading-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #4B4C5B;
+}
+
+.healthcare .container .heading-title::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-253.svg');
+    width: 60px;
+    height: 40px;
+    border: 1px solid #DEDEDE;
+    border-bottom: 0px;
+    border-radius: 10px;
+}
+
+.healthcare .container .heading-title:nth-child(4):after {
+    content: "";
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-254.svg');
+    border: 0;
+}
+
+.healthcare .container .under-image p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+}
+
+.healthcare .container .under-image p:not(:last-child) {
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 20px;
+}
+
+.healthcare .container .healthcare__image::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: -80px;
+    left: -80px;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-38-1.png');
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    height: 200px;
+}
+
+.healthcare .container .healthcare__image::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -200px;
+    right: 20px;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-236-1.png');
+    width: 150px;
+    height: 150px;
+}
+
+.healthcare__col-2--padding {
+    padding-left: 50px;
+>>>>>>> Stashed changes
+}
+
+.healthcare__heading {
+    color: #32375F;
+    font-weight: bold;
+    padding-right: 100px;
 }
 
 .healthcare__heading span {
@@ -259,6 +424,7 @@ a:hover {
     text-decoration: none;
 }
 
+<<<<<<< Updated upstream
 .healthcare__heading {
     margin-bottom: 50px;
 }
@@ -266,4 +432,417 @@ a:hover {
 .healthcare__desc {
     margin-bottom: 80px;
     padding-right: 150px;
+=======
+.healthcare__list ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.healthcare__list ul > li {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #32375F;
+}
+
+.healthcare__list ul > li::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    padding-right: 10px;
+    color: #E0DFF3;
+}
+
+/* Section: Plan */
+
+.plan {
+    position: relative;
+    background-color: #F6F6FF;
+    padding: 150px 0 150px 0;
+}
+
+.plan::before  {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-251.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 1400px;
+    height: 233px;
+}
+
+.plan__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.plan .plan__heading,
+.plan .plan__title {
+    font-weight: 700;
+    text-align: center;
+    color: #33375E;
+}
+
+.plan .plan__title {
+    color: #615FDD;
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.plan .plan__price {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #33375E;
+    font-weight: 700;
+    text-align: center;
+    color: #33375E;   
+}
+
+.plan .plan__section .plan__box p {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.plan .plan__section .plan__box p a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.plan ul {
+    margin: 0;
+    padding: 30px;
+}
+
+.plan .plan__section .plan__box ul li {
+    color: #32375F;
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.plan .plan__section .plan__box ul > li::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    padding-right: 10px;
+    color: #E0DFF3;
+}
+
+.plan .plan__section .plan__col .plan__box {
+    position: relative;
+    width: 100%;
+    max-width: 426px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.plan .plan__section .plan__col:nth-child(2) .plan__box ul li:nth-child(n+3) {
+    opacity: 50%;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box {
+    padding: 70px 20px;
+    background-color: #33375E;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box a {
+    background-color: #5854F7;
+    color: #fff;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box a:hover {
+    background-color: transparent;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box .plan__heading,
+.plan .plan__section .plan__col:nth-child(3) .plan__box .plan__price,
+.plan .plan__section .plan__col:nth-child(3) .plan__box ul li  {
+    color: #fff;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box .plan__price {
+    border-color: #fff;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box ul li:nth-child(n+4) {
+    opacity: 50%;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box::before {
+    content: "Recommended";
+    position: absolute;
+    margin:0 auto;
+    top: -20px;
+    left: 0;
+    right: 0;
+    display: block;
+    padding: 5px;
+    width: 60%;
+    border: 2px solid #FFA0C2;
+    border-radius: 100px;
+    background-color: #FFA0C2;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.plan .plan__section .plan__col:nth-child(2) .plan__inner::before,
+.plan .plan__section .plan__col:nth-child(3) .plan__inner::before,
+.plan .plan__section .plan__col:nth-child(4) .plan__inner::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-38-1.png');
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    height: 200px;
+}
+
+.plan .plan__section .plan__col:nth-child(2) .plan__inner::before {
+    bottom: -75px;
+    left: -50px;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__inner::before {
+    top: -75px;
+    left: -50px;
+}
+
+.plan .plan__section .plan__col:nth-child(4) .plan__inner::before {
+    top: 0;
+    bottom: 0;
+    right: -50px;
+    margin: auto 0;
+}
+
+/* Booking form */
+
+.booking-form {
+    margin: 100px 0;
+    text-align: center;
+}
+
+.booking-form .booking-form__amelia h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.booking-form .booking-form__amelia .am-fs__wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+.booking-form .booking-form__amelia .am-fs__wrapper .am-fs__main {
+    max-width: 100% !important;
+}
+
+.booking-form .booking-form__signup,
+.booking-form .booking-form__amelia {
+    padding: 100px 50px;
+    background-color: #F6F6FF;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,.1);
+    box-shadow: 0 0 10px 5px rgba(0,0,0,.1);
+}
+
+.booking-form .booking-form__signup .booking-form__content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.booking-form .booking-form__signup .booking-form__content h2 {
+    margin-bottom: 20px;
+}
+
+/* Section: Statement */
+.statement {
+    padding-bottom: 100px;
+}
+
+.statement .column-wrapper {
+    width: 100%;
+    max-width: 78%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.statement .column-wrapper h2,
+.statement .column-wrapper p {
+    font-family: 'Inter', sans-serif;
+}
+
+.statement .column-wrapper h2 {
+    font-weight: 700;
+    color: #32375F;
+    margin-bottom: 30px;
+}
+
+.statement .column-wrapper p {
+    font-weight: 400;
+    color: #707070;
+}
+
+/* Section: Values */
+.values {
+    padding-bottom: 100px;
+}
+
+.values .values-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #32375F;
+}
+
+.values .values-description {
+    padding: 10px;
+    padding-right: 50px;
+    font-family: 'Inter',sans-serif ;
+}
+
+.values .values-description p {
+    padding-bottom: 30px;
+}
+
+.values .values-description ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+}
+
+.values .values-description ul > li {
+    padding-bottom: 20px;
+}
+
+/* Section: Team */
+.team {
+    margin-bottom: 100px;
+}
+
+.team .team__heading,
+.team .team__name,
+.team .team__title {
+    font-family: 'Inter', sans-serif;
+    color: #32375F;
+}
+
+.team .team__heading,
+.team .team__name {
+    font-weight: 700;
+    text-align: center;
+}
+
+.team .team__name {
+    font-size: 30px;
+}
+
+.team .team__title {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.team .team__image {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+
+/**
+ * User Registration
+ */
+
+.page-template-user-registration {
+    background-color: #F5F6FF;
+    background-image: url( '../img/signup-bg.svg' );
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+.page-template-user-registration .site-header,
+.page-template-user-registration .site-footer {
+    display: none;
+}
+
+.page-template-user-registration .signup .row {
+    align-items: center;
+}
+
+.page-template-user-registration .signup .signup__content {
+    padding: 0 200px;
+}
+
+.page-template-user-registration .signup .signup__content .site-branding {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.page-template-user-registration .signup .signup__heading h1 {
+    font-weight: bold;
+}
+
+.page-template-user-registration .signup .signup__heading h1 span {
+    display: block;
+    color: #5854F7;
+}
+
+.page-template-user-registration .signup .signup__form {
+    margin: 0 -15px;
+    padding: 100px;
+    background-color: #fff;
+}
+
+.page-template-user-registration .signup .signup__form h2 {
+    margin-bottom: 20px;
+    color: #32375F;
+    font-weight: bold;
+}
+
+.page-template-user-registration .signup .signup__form label {
+    color: #32375F;
+}
+
+.page-template-user-registration .signup .signup__form input,
+.page-template-user-registration .signup .signup__form select {
+    border-radius: 10px !important;
+    padding: 16px !important;
+    font-size: 20px;
+}
+
+.page-template-user-registration .signup .signup__form button[type="submit"] {
+    background-color: #5854F7;
+    padding: 20px 38px;
+    border: 2px solid #5854F7;
+    border-radius: 10px;
+    font-size: 1rem;
+    color:#fff;
+}
+
+.page-template-user-registration .signup .signup__form .user-registration-error {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    border-top: none !important;
+    color: #C30000 !important;
+}
+
+.page-template-user-registration .signup .signup__form .user-registration-error::before {
+    margin-right: 5px !important;
+}
+
+.page-template-user-registration .signup .signup__form .user-registration {
+    padding: 0;
+    border: none;
+>>>>>>> Stashed changes
 }

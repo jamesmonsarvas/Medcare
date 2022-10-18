@@ -190,6 +190,7 @@ function medcare_scripts() {
 	wp_style_add_data( 'medcare-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'medcare-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array(), time(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -49,8 +49,19 @@
 				<div class="col-lg-3 col-md-3 col-sm-3">
 					<nav class="secondary-nav">
 						<ul>
-							<li><a href="#">Log In</a></li>
-							<li><a href="#" class="solid-btn">Sign Up</a></li>
+							<?php if( is_user_logged_in() ) : ?>
+								<li>
+									<button class="toggle-profile">Account <i class="fas fa-angle-down"></i></button>
+									<ul>
+										<li><a href="<?php echo get_site_url() . '/client' ?>">Dashboard</a></li>
+										<li><a href="<?php echo get_site_url() . '/my-account/' ?>">Profile</a></li>
+										<li><a href="<?php echo get_site_url() . '/my-account/user-logout' ?>">Logout</a></li>
+									</ul>
+								</li>
+							<?php else : ?>
+								<li><a href="<?php echo get_site_url() . '/my-account/' ?>">Log In</a></li>
+								<li><a href="<?php echo get_site_url() . '/sign-up/' ?>" class="solid-btn">Sign Up</a></li>
+							<?php endif; ?>
 						</ul>
 					</nav>
 				</div>
