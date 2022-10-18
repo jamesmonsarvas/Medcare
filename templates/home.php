@@ -5,11 +5,11 @@
     <?php while( have_rows('banner') ): the_row();  ?>
 
         <?php
-        // Get sub field values.
-        $heading = get_sub_field( 'heading' );
-        $description = get_sub_field( 'description' );
-        $image = get_sub_field( 'image' );
-        $link = get_sub_field( 'link' );
+            // Get sub field values.
+            $heading = get_sub_field( 'heading' );
+            $description = get_sub_field( 'description' );
+            $image = get_sub_field( 'image' );
+            $link = get_sub_field( 'link' );
         ?>
 
         <!-- Banner -->
@@ -68,19 +68,19 @@
     <?php while( have_rows('healthcare') ): the_row(); ?>
 
         <?php
-        // Get sub field values.
-        $heading = get_sub_field( 'heading' );
-        $description = get_sub_field( 'description' );
-        $image = get_sub_field( 'image' );
-        $link = get_sub_field( 'link' );
-        $list = get_sub_field( 'list' );
+            // Get sub field values.
+            $heading = get_sub_field( 'heading' );
+            $description = get_sub_field( 'description' );
+            $image = get_sub_field( 'image' );
+            $link = get_sub_field( 'link' );
+            $list = get_sub_field( 'list' );
         ?>
 
         <!-- Healthcare-->
         <section class="healthcare">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="col-lg-6 col-md-6 col-sm-6 image__column">
                         <figure class="healthcare__image">
                             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                         </figure>
@@ -117,38 +117,46 @@
         <!-- Plan -->
         <section class="plan">
             <div class="container">
-                <div class="row justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-center plan__section">
+                    <div class="col-lg-12 col-md-12 col-sm-12 align-items-center">
+                        <h2 class="plan__title">
+                            <?php echo $heading; ?>
+                        </h2>
+                    </div>
 
                     <?php if( have_rows('repeater') ): ?>
 
                         <?php while( have_rows('repeater') ): the_row(); ?>
 
                         <?php 
-                        $repeater_heading = get_sub_field('heading');
-                        $repeater_price = get_sub_field('price');
-                        $repeater_list = get_sub_field('list');
+                            $repeater_heading = get_sub_field('heading');
+                            $repeater_price = get_sub_field('price');
+                            $repeater_list = get_sub_field('list');
                         ?>
 
-                        <div class="col-lg-3 col-md-3 col-sm-3 plan__col">
-                            <h3 class="plan__heading">
-                                <?php echo $repeater_heading; ?>
-                            </h3>
+                        <div class="col-lg-4 col-md-4 col-sm-4 plan__col">
+                            <div class="plan__inner">
+                                <div class="plan__box">
+                                    <h3 class="plan__heading">
+                                        <?php echo $repeater_heading; ?>
+                                    </h3>
 
-                            <h2 class="plan__price">
-                                &#8369; <?php echo $repeater_price; ?>
-                            </h2>
+                                    <h2 class="plan__price">
+                                        &#8369; <?php echo $repeater_price; ?>
+                                    </h2>
 
-                            <?php echo $repeater_list; ?>
+                                    <?php echo $repeater_list; ?>
+                                </div>
+                            </div>
                         </div>
 
                         <?php endwhile; ?>
-                    
                     <?php endif; ?>
 
                 </div>
             </div>
         </section>
-        
+
     <?php endwhile; ?>
 <?php endif; ?>
 

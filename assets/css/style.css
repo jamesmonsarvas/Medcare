@@ -270,7 +270,102 @@ a:hover {
 /* Section: Healthcare */
 
 .healthcare {
-    padding: 150px 0 245px 0;
+    padding: 150px 0;
+}
+
+.healthcare .container .healthcare__image {
+    position: relative;
+}
+
+.healthcare .container .healthcare__image img {
+    position: inherit;
+    z-index: 1;
+}
+
+.healthcare .container .under-image {
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
+    margin-left: 80px;
+    padding: 20px;
+    padding-right: 100px;
+    width: 400px;
+    background-color: #fff;
+    border-left: 5px solid #615FE3;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.healthcare .container .under-image .container-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #605EE1;
+}
+
+.healthcare .container .heading-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #4B4C5B;
+}
+
+.healthcare .container .heading-title::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-253.svg');
+    width: 60px;
+    height: 40px;
+    border: 1px solid #DEDEDE;
+    border-bottom: 0px;
+    border-radius: 10px;
+}
+
+.healthcare .container .heading-title:nth-child(4):after {
+    content: "";
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-254.svg');
+    border: 0;
+}
+
+.healthcare .container .under-image p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+}
+
+.healthcare .container .under-image p:not(:last-child) {
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 20px;
+}
+
+.healthcare .container .healthcare__image::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: -80px;
+    left: -80px;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-38-1.png');
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    height: 200px;
+}
+
+.healthcare .container .healthcare__image::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -200px;
+    right: 20px;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-236-1.png');
+    width: 150px;
+    height: 150px;
+}
+
+.healthcare__col-2--padding {
+    padding-left: 50px;
 }
 
 .healthcare__heading {
@@ -279,14 +374,9 @@ a:hover {
     padding-right: 100px;
 }
 
-.healthcare__col-2--padding {
-    padding-left: 50px;
-}
-
 .healthcare__heading span {
     color: #5853F6;
 }
-
 
 .healthcare__cta a {
     text-decoration: none;
@@ -304,20 +394,57 @@ a:hover {
     color: #32375F;
 }
 
+.healthcare__list ul > li::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    padding-right: 10px;
+    color: #E0DFF3;
+}
+
 /* Section: Plan */
 
 .plan {
+    position: relative;
     background-color: #F6F6FF;
     padding: 150px 0 150px 0;
 }
 
-.plan__heading {
+.plan::before  {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-251.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    max-height: 100%;
+}
+
+.plan__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.plan .plan__heading,
+.plan .plan__title {
     font-weight: 700;
     text-align: center;
     color: #33375E;
 }
 
-.plan__price {
+.plan .plan__title {
+    color: #615FDD;
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.plan .plan__price {
     padding-bottom: 20px;
     border-bottom: 1px solid #33375E;
     font-weight: 700;
@@ -330,58 +457,54 @@ a:hover {
     padding: 30px;
 }
 
-.plan ul li {
+.plan .plan__section .plan__box ul li {
     color: #32375F;
     margin-bottom: 30px;
     list-style: none;
 }
 
-.plan__col:nth-child(1) {
-    height: 600px;
-    padding: 50px 20px 50px 20px;
-    margin-right: 100px;
-    border-radius: 30px;
-    background-color: #ffffff;
+.plan .plan__section .plan__box ul > li::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    padding-right: 10px;
+    color: #E0DFF3;
 }
 
-.plan__col:nth-child(1) li:nth-child(3), 
-.plan__col:nth-child(1) li:nth-child(4),
-.plan__col:nth-child(1) li:nth-child(5) {
-    opacity: 50%;
-}
-
-.plan__col:nth-child(2) li:nth-child(4), 
-.plan__col:nth-child(2) li:nth-child(5){
-    opacity: 50%;
-}
-
-.plan__col:nth-child(3) {
-    height: 600px;
-    padding: 50px 20px 50px 20px;
-    margin-left: 100px;
-    border-radius: 30px;
-    background-color: #ffffff;
-}
-
-.plan__col:nth-child(2) {
+.plan .plan__section .plan__col .plan__box {
     position: relative;
-    padding: 50px 20px 50px 20px;
+    width: 100%;
+    max-width: 426px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #fff;
     border-radius: 30px;
+}
+
+.plan .plan__section .plan__col:nth-child(2) .plan__box ul li:nth-child(n+3) {
+    opacity: 50%;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box {
+    padding: 70px 20px;
     background-color: #33375E;
-    height: 650px;
 }
 
-.plan__col:nth-child(2) h2 {
-    color: #fff;
-    border-bottom: 1px solid #fff;
-}
-
-.plan__col:nth-child(2) h3,
-.plan__col:nth-child(2) li {
+.plan .plan__section .plan__col:nth-child(3) .plan__box .plan__heading,
+.plan .plan__section .plan__col:nth-child(3) .plan__box .plan__price,
+.plan .plan__section .plan__col:nth-child(3) .plan__box ul li  {
     color: #fff;
 }
 
-.plan__col:nth-child(2)::before {
+.plan .plan__section .plan__col:nth-child(3) .plan__box .plan__price {
+    border-color: #fff;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box ul li:nth-child(n+4) {
+    opacity: 50%;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__box::before {
     content: "Recommended";
     position: absolute;
     margin:0 auto;
@@ -401,10 +524,126 @@ a:hover {
     color: #fff;
 }
 
-.plan__cta {
+.plan .plan__section .plan__col:nth-child(2) .plan__inner::before,
+.plan .plan__section .plan__col:nth-child(3) .plan__inner::before,
+.plan .plan__section .plan__col:nth-child(4) .plan__inner::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    background-image: url('http://localhost/Medcare/wp-content/uploads/2022/10/Group-38-1.png');
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    height: 200px;
+}
+
+.plan .plan__section .plan__col:nth-child(2) .plan__inner::before {
+    bottom: -75px;
+    left: -50px;
+}
+
+.plan .plan__section .plan__col:nth-child(3) .plan__inner::before {
+    top: -75px;
+    left: -50px;
+}
+
+.plan .plan__section .plan__col:nth-child(4) .plan__inner::before {
+    top: 0;
+    bottom: 0;
+    right: -50px;
+    margin: auto 0;
+}
+
+/* Section: Statement */
+.statement {
+    padding-bottom: 100px;
+}
+
+.statement .column-wrapper {
+    width: 100%;
+    max-width: 78%;
+    margin: 0 auto;
     text-align: center;
 }
 
-.plan__cta a {
-    text-decoration: none;
+.statement .column-wrapper h2,
+.statement .column-wrapper p {
+    font-family: 'Inter', sans-serif;
+}
+
+.statement .column-wrapper h2 {
+    font-weight: 700;
+    color: #32375F;
+    margin-bottom: 30px;
+}
+
+.statement .column-wrapper p {
+    font-weight: 400;
+    color: #707070;
+}
+
+/* Section: Values */
+.values {
+    padding-bottom: 100px;
+}
+
+.values .values-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #32375F;
+}
+
+.values .values-description {
+    padding: 10px;
+    padding-right: 50px;
+    font-family: 'Inter',sans-serif ;
+}
+
+.values .values-description p {
+    padding-bottom: 30px;
+}
+
+.values .values-description ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+}
+
+.values .values-description ul > li {
+    padding-bottom: 20px;
+}
+
+/* Section: Team */
+.team {
+    padding-bottom: 150px;
+}
+
+.team .team__heading,
+.team .team__name,
+.team .team__title {
+    font-family: 'Inter', sans-serif;
+    color: #32375F;
+}
+
+.team .team__heading,
+.team .team__name {
+    font-weight: 700;
+    text-align: center;
+}
+
+.team .team__name {
+    font-size: 30px;
+}
+
+.team .team__title {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.team .team__image {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
 }
